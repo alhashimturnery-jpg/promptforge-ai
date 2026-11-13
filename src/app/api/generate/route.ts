@@ -89,8 +89,7 @@ export async function POST(req: NextRequest) {
     )}:generateContent`;
 
     const controller = new AbortController();
-    const timeoutId = setTimeout(() => controller.abort(), 45000);
-
+    const timeoutId = setTimeout(() => controller.abort(), 58000);
     let geminiRes: Response;
     try {
       geminiRes = await fetch(endpoint, {
@@ -120,7 +119,7 @@ export async function POST(req: NextRequest) {
           generationConfig: {
             temperature: 0.7,
             topP: 0.9,
-            maxOutputTokens: 4096,
+            maxOutputTokens: 2500,
           },
         }),
         signal: controller.signal,
