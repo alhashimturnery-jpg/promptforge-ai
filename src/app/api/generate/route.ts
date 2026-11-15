@@ -120,7 +120,7 @@ export async function POST(req: NextRequest) {
             maxOutputTokens: 2500,
             thinkingConfig: {
               thinkingLevel: "LOW",
-            },
+            },},
         }),
         signal: controller.signal,
       });
