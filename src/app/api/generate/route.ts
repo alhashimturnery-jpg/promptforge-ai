@@ -116,11 +116,11 @@ export async function POST(req: NextRequest) {
               ],
             },
           ],
-          generationConfig: {
-            temperature: 0.7,
-            topP: 0.9,
+           generationConfig: {
             maxOutputTokens: 2500,
-          },
+            thinkingConfig: {
+              thinkingLevel: "LOW",
+            },
         }),
         signal: controller.signal,
       });
